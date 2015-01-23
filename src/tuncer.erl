@@ -300,7 +300,7 @@ handle_info({Port, {data, Data}}, #state{port = Port, pid = Pid} = State) ->
 
 % WTF?
 handle_info(Info, State) ->
-    error_logger:error_report([wtf, Info]),
+    % error_logger:error_report([wtf, Info]),
     {noreply, State}.
 
 terminate(_Reason, #state{fd = FD, dev = Dev, port = Port}) ->
